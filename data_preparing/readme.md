@@ -1,4 +1,4 @@
-#**Подготовка данных**
+# **Подготовка данных**
 
 Ссылка на исходный датасет - [здесь](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).
 Описание датасета на kaggle - [здесь](https://www.kaggle.com/datasets/sudharshann/pcb-defect-dataset)
