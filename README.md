@@ -25,6 +25,10 @@
 ### Системные требования 
 Заполним после создания и упаковки проекта
 
+### Architecture 
+
+![ml pipeline.jpg](images%2Fml%20pipeline.jpg)
+
 ### Deploy
 Заполним после создания и упаковки проекта
 
@@ -46,3 +50,4 @@
 - Ссылка на исходный датасет - [здесь](https://www.dropbox.com/s/h0f39nyotddibsb/VOC_PCB.zip?dl=0)
 - Описание датасета на kaggle - [здесь](https://www.kaggle.com/datasets/sudharshann/pcb-defect-dataset)
 - Ссылка на получившийся датасет - [здесь](https://drive.google.com/drive/folders/1RbKRm6jYgw1rHkB8_KPg4Eu-Q_fVcrPc?usp=sharing)
+
