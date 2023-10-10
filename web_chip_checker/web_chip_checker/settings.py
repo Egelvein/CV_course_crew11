@@ -119,4 +119,9 @@ STATIC_ROOT = 'web_chip_checker/checker/static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = 'uploads'
+MEDIA_ROOT = 'media'
+
+
+CELERY_TIMEZONE = 'Europe/Moscow'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
