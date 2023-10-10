@@ -39,7 +39,7 @@
 
 ### Команда проекта
 - DE + ML - [Елизавета Талынкова]
-- ML + Back-end - [Мулхам Шахин]
+- ML + Back-end - [Мулхам Шахин](https://www.linkedin.com/in/mulham-shaheen-684352206/)
 - DE + ML - [Синяев Вячеслав](https://www.linkedin.com/in/vyacheslavsinyaev/) 
 
 ### Ссылки
