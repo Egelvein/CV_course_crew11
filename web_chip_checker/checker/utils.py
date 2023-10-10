@@ -3,7 +3,7 @@ import os
 
 
 def handle_uploaded_file(file):
-    folder = f'{settings.MEDIA_ROOT}'
+    folder = f'{settings.MEDIA_ROOT}/uploads'
     if not os.path.exists(folder):
         os.makedirs(folder)
     with open(f'{folder}/{file.name}', 'wb+') as destination:
