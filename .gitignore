@@ -12,3 +12,7 @@
 # Catalogs #
 ############
 /Labels
+
+# Files #
+#########
+*.txt
