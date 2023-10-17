@@ -8,4 +8,4 @@
 
 Ниже в качестве оценок обучения приведены графики:
 
-![](images/F1_curve_plot image.png)
+![](experiments/Experiment 1/images/F1_curve_plot image.png)
