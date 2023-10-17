@@ -1,1 +1,0 @@
-["missing_hole", "mouse_bite", "open_circuit", "short", "spurious_copper", "spur"]

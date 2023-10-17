@@ -12,6 +12,9 @@
 # Catalogs #
 ############
 /Labels
+/Good_dataset
+/data_preparing/Dataset_for_CNN
+/data_preparing/Dataset_for_YOLO
 
 # Files #
 #########
