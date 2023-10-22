@@ -28,7 +28,7 @@
 
 ### Architecture 
 
-![ml pipeline.jpg](images%2Fml%20pipeline.jpg)
+![ml_pipeline.jpg](images/ml_pipeline.jpg)
 
 ### Deploy
 Заполним после создания и упаковки проекта
