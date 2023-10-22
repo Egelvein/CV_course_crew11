@@ -8,8 +8,7 @@
 
 Ниже в качестве оценок обучения приведены графики:
 
-![](images/confusion_matrix.png)
-![](images/confusion_matrix_normalized.png)
+
 ![](images/F1_curve_plot.png)
 ![](images/P_curve.png)
 ![](images/R_curve.png)
