@@ -19,6 +19,7 @@
 - [Ссылки](#ссылки)
 
 ### Технологии
+- [YOLOv5](https://github.com/ultralytics/yolov5)
 - [YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Django](https://www.djangoproject.com)
 
