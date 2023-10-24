@@ -22,6 +22,9 @@
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Django](https://www.djangoproject.com)
+- [ClearML](https://clear.ml)
+- [Wandb](https://wandb.ai)
+
 
 
 ### Системные требования 
