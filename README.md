@@ -47,7 +47,7 @@
 Будем заполнять по мере появления ошибок при использовании проекта
 
 ### Команда проекта
-- DE + ML - [Елизавета Талынкова]
+- DE + ML + PM - [Елизавета Талынкова]
 - ML + Back-end - [Мулхам Шахин](https://www.linkedin.com/in/mulham-shaheen-684352206/)
 - DE + ML - [Синяев Вячеслав](https://www.linkedin.com/in/vyacheslavsinyaev/) 
 
