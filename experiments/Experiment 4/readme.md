@@ -15,5 +15,4 @@
 ![](images/R_curve.png)
 ![](images/PR_curve.png)
 ![](images/results.png)
-![](images/val_batch1_pred.png)
-
+![](images/val_batch1_pred.jpg)
