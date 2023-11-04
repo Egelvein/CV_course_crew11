@@ -6,6 +6,8 @@
 +  Размер батча - 50
 +  Размер изображения - 608
 
+[Ссылка](https://app.clear.ml/projects/ad34b5d2036d44e7a0d10c6189ee8a59/experiments/4149c0a569d04dc0ad84e167cb69d515/output/execution) на эксперимент в ClearML.
+
 Ниже в качестве оценок обучения приведены графики:
 
 ![](images/confusion_matrix.png)
