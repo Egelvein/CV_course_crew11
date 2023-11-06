@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.conf import settings
 from .forms import ImageForm
 from .utils import handle_uploaded_file
-
+from .tasks import detect_problem
 
 def main_camera(request):
     form = ImageForm()
@@ -28,6 +28,6 @@ def main_camera(request):
 
         upload_path = handle_uploaded_file(uploaded_file)
 
-        # model inference here
+        detect_problem(upload_path, "media/generated/"+uploaded_file.name)
 
         return JsonResponse({'Json': uploaded_file.name})
