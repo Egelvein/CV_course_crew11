@@ -26,4 +26,4 @@ async def upload_file(file: UploadFile):
     for i in res:
         preds.append(i.dict())
     print(preds)
-    return {"filename": file.filename, "results": str(preds)}
+    return {"filename": file.filename, "results": preds}

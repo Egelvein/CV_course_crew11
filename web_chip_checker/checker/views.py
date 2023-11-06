@@ -6,6 +6,7 @@ from .forms import ImageForm
 from .utils import handle_uploaded_file
 from .tasks import detect_problem
 
+
 def main_camera(request):
     form = ImageForm()
 
