@@ -120,8 +120,10 @@ STATIC_ROOT = 'web_chip_checker/checker/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
 
+
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672'
 
 CELERY_TIMEZONE = 'Europe/Moscow'
-CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60

@@ -4,7 +4,8 @@ from django.shortcuts import render
 from django.conf import settings
 from .forms import ImageForm
 from .utils import handle_uploaded_file
-from .tasks import detect_problem
+from .tasks import detect_problem, test
+from .models import Chip
 
 
 def main_camera(request):
@@ -27,8 +28,23 @@ def main_camera(request):
             context['error'] = "File should be an image"
             return render(request, 'index.html', context)
 
-        upload_path = handle_uploaded_file(uploaded_file)
+        chip = Chip()
+        chip.save()
 
-        detect_problem(upload_path, "media/generated/"+uploaded_file.name)
+        upload_path = handle_uploaded_file(uploaded_file, chip)
 
-        return JsonResponse({'Json': uploaded_file.name})
+        task = detect_problem.delay(chip.id)
+
+        return JsonResponse({'Json':str(task)})
+
+
+def result(request, chip_id):
+    chip = Chip.objects.get(pk=chip_id)
+    status = chip.status
+
+    result_path = chip.result_path
+
+    return render(request, 'results.html', context={
+        "status": status,
+        "result_path": result_path,
+    })
