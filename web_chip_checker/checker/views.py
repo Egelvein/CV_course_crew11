@@ -1,6 +1,6 @@
 import base64
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 from .forms import ImageForm
 from .utils import handle_uploaded_file
@@ -35,7 +35,8 @@ def main_camera(request):
 
         task = detect_problem.delay(chip.id)
 
-        return JsonResponse({'Json':str(task)})
+        # return JsonResponse({'Json': str(task)})
+        return redirect("result", chip.id)
 
 
 def result(request, chip_id):
@@ -47,4 +48,10 @@ def result(request, chip_id):
     return render(request, 'results.html', context={
         "status": status,
         "result_path": result_path,
+        "preds": [
+            {'contour': [301.8711242675781, 377.7820129394531, 318.38507080078125, 402.55255126953125],
+             'probability': 0.8628689050674438, 'class': 'mouse_bite'},
+            {'contour': [301.8711242675781, 377.7820129394531, 318.38507080078125, 402.55255126953125],
+             'probability': 0.8628689050674438, 'class': 'mouse_bite'},
+        ],
     })
