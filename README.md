@@ -13,10 +13,12 @@
 - [Architecture](#architecture)
 - [Deploy](#deploy)
 - [Использование](#использование)
+- [Dataset](#dataset)
 - [Contributing](#contributing)
 - [FAQ](#faq)
 - [Команда проекта](#команда-проекта)
 - [Ссылки](#ссылки)
+
 
 ### Технологии
 - [YOLOv5](https://github.com/ultralytics/yolov5)
