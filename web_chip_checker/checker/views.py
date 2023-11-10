@@ -5,7 +5,7 @@ from django.conf import settings
 from .forms import ImageForm
 from .utils import handle_uploaded_file
 from .tasks import detect_problem, test
-from .models import Chip
+from .models import Chip, Detection
 
 
 def main_camera(request):
@@ -41,17 +41,22 @@ def main_camera(request):
 
 def result(request, chip_id):
     chip = Chip.objects.get(pk=chip_id)
+    try:
+        detections = Detection.objects.filter(chip_id=chip_id)
+    except Detection.DoesNotExist:
+        detections = []
+
     status = chip.status
+
+    preds = [{
+        "class": det.type,
+        "score": det.score,
+    } for det in detections]
 
     result_path = chip.result_path
 
     return render(request, 'results.html', context={
         "status": status,
         "result_path": result_path,
-        "preds": [
-            {'contour': [301.8711242675781, 377.7820129394531, 318.38507080078125, 402.55255126953125],
-             'probability': 0.8628689050674438, 'class': 'mouse_bite'},
-            {'contour': [301.8711242675781, 377.7820129394531, 318.38507080078125, 402.55255126953125],
-             'probability': 0.8628689050674438, 'class': 'mouse_bite'},
-        ],
+        "preds": preds,
     })

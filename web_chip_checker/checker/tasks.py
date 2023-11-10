@@ -2,6 +2,7 @@ from celery import shared_task
 from .utils import draw_counters
 from .models import Chip
 import requests
+import os
 import json
 
 
@@ -15,9 +16,11 @@ def detect_problem(chip_id):
     result_path = chip.result_path
     files = {'file': open(upload_path, 'rb')}
 
-    r = requests.post("http://127.0.0.1:8000/file/", files=files)
+    api = os.getenv("API_URL")
+
+    r = requests.post(f"http://{api}/file/", files=files)
     data = r.json()["results"]
-    draw_counters(upload_path, result_path, data)
+    draw_counters(upload_path, result_path, data, chip_id)
     chip.status = "DONE"
     chip.save()
 
