@@ -1,0 +1,4 @@
+Django~=4.2.5
+requests~=2.31.0
+celery~=5.3.4
+opencv-python~=4.8.1.78
