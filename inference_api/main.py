@@ -6,7 +6,7 @@ from infrustructure.detector import *
 
 
 app = FastAPI()
-yolo_detector = YoloV5Detector("triton/best (1).pt")
+yolo_detector = YoloV5Detector("infrustructure/best.pt")
 UPLOAD_PATH = "uploads"
 
 

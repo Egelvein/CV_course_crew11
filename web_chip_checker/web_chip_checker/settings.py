@@ -123,7 +123,7 @@ MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
 
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672'
+CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq'
 
 CELERY_TIMEZONE = 'Europe/Moscow'
 CELERY_TASK_TIME_LIMIT = 30 * 60

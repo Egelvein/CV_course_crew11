@@ -22,3 +22,9 @@ class Chip(models.Model):
     def result_path(self):
         processed_path = settings.MEDIA_ROOT + "/processed/"
         return f"{processed_path}/{self.id}.jpg"
+
+
+class Detection(models.Model):
+    score = models.FloatField(max_length=50, default=0)
+    type = models.CharField(max_length=50)
+    chip_id = models.ForeignKey(Chip, on_delete=models.CASCADE)
