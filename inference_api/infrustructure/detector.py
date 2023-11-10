@@ -73,12 +73,12 @@ class YoloV5Detector(DummyDetector):
     def detect_contours(self, img_path: str):
         predictions = []
         img = Image.open(img_path)
-        results = self.model(img)
-        for result in results:
-            data = result.boxes.data[0]
+        results = self.model.predict(img)
+        for result in results[0].boxes.data:
+            # data = result.boxes.data[0]
 
-            contour = Contour(bounding_rect=(data[0], data[1], data[2], data[3]))
-            prediction = DetectorPrediction(contour, float(data[4]), int(data[-1]))
+            contour = Contour(bounding_rect=(result[0], result[1], result[2], result[3]))
+            prediction = DetectorPrediction(contour, float(result[4]), int(result[-1]))
             predictions.append(prediction)
 
         return predictions
