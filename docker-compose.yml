@@ -22,7 +22,7 @@ services:
 
   web:
     build: web_chip_checker
-    command: python manage.py runserver 0.0.0.0:8000 && celery -A web_chip_checker  worker -l info
+    command:  python manage.py runserver 0.0.0.0:8000
     environment:
       - API_URL=inference:8000
     volumes:
@@ -30,5 +30,15 @@ services:
     ports:
       - 8000:8000
 
+  celery_worker:
+    build: web_chip_checker
+    command: celery -A web_chip_checker  worker -l info
+    volumes:
+      - ./web_chip_checker/:/app
+    environment:
+      - API_URL=inference:8000
+    depends_on:
+      - web
+      - rabbitmq
 
 #celery -A web_chip_checker  worker -l info --concurrency=2 --without-gossip --pool=solo
