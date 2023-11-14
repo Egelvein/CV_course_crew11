@@ -45,8 +45,8 @@ Using Docker compose, the system can be started using the following steps:
 
 - Clone the given repository
 - Run docker on your machine
-- ````sudo docker-compose build```
-- ````sudo docker-compose up -d```.
+- ```sudo docker-compose build```
+- ```sudo docker-compose up -d```.
 
 ⚠️ **disclaimer:** эта версия является тестовой, и выполняет задачу демонстрации итогов курса по компьютерному зрению.
 
