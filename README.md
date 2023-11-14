@@ -74,7 +74,7 @@ We will fill it in as errors occur while using the project.
 ### Project Team
 - DE + ML + PM - Elizaveta Talynkova
 - ML + Back-end - [Mulham Shahin](https://www.linkedin.com/in/mulham-shaheen-684352206/)
-- DE + ML - [Sinyayev Vyacheslav](https://www.linkedin.com/in/vyacheslavsinyaev/) 
+- DE + ML - [Siniaev Viacheslav](https://www.linkedin.com/in/vyacheslavsinyaev/) 
 
 ### Links
 - Link to the original dataset - [here](https://www.dropbox.com/s/h0f39nyotddibsb/VOC_PCB.zip?dl=0)
