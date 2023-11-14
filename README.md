@@ -48,7 +48,7 @@ Using Docker compose, the system can be started using the following steps:
 - ```sudo docker-compose build```
 - ```sudo docker-compose up -d```.
 
-⚠️ **disclaimer:** эта версия является тестовой, и выполняет задачу демонстрации итогов курса по компьютерному зрению.
+⚠️ **disclaimer:** this version is a test version, and fulfills the task of demonstrating the outcomes of the computer vision course.
 
 ### Demonstration of the program operation
 
