@@ -1,14 +1,14 @@
-# Результаты эксперимента 3
+# Results of experiment 3
 
-В данном эксперименте использовалась модель YOLOv5s.
-Параметры, заданные при обучении:
-+  Количество эпох - 20
-+  Размер батча - 50
-+  Размер изображения - 608
+In this experiment, the YOLOv5s model was used.
+Parameters set during training:
++ Number of epochs - 20
++ Batch size - 50
++ Image size - 608
 
-[Ссылка](https://app.clear.ml/projects/ad34b5d2036d44e7a0d10c6189ee8a59/experiments/7465f164b89f49b2908588fca4a86138/output/execution) на эксперимент в ClearML.
+[Link](https://app.clear.ml/projects/ad34b5d2036d44e7a0d10c6189ee8a59/experiments/7465f164b89f49b2908588fca4a86138/output/execution) to the experiment in ClearML.
 
-Ниже в качестве оценок обучения приведены графики:
+The graphs are shown below as training evaluations:
 
 ![](images/confusion_matrix.png)
 ![](images/confusion_matrix_normalized.png)

@@ -1,14 +1,14 @@
-# Результаты эксперимента 4
+# Results of experiment 4
 
-В данном эксперименте использовалась модель YOLOv8n.
-Параметры, заданные при обучении:
-+  Количество эпох - 20
-+  Размер батча - 50
-+  Размер изображения - 608
+In this experiment, the YOLOv8n model was used.
+Parameters set during training:
++ Number of epochs - 20
++ Batch size - 50
++ Image size - 608
 
-[Ссылка](https://app.clear.ml/projects/ad34b5d2036d44e7a0d10c6189ee8a59/experiments/e652ed3cd29840dbaed88c15a8a46e83/output/execution) на эксперимент в ClearML.
+[Link](https://app.clear.ml/projects/ad34b5d2036d44e7a0d10c6189ee8a59/experiments/e652ed3cd29840dbaed88c15a8a46e83/output/execution) to the experiment in ClearML.
 
-Ниже в качестве оценок обучения приведены графики:
+The graphs are shown below as training evaluations:
 
 ![](images/confusion_matrix.png)
 ![](images/confusion_matrix_normalized.png)
