@@ -1,8 +1,8 @@
-### Пример запроса
+### Example of a request
 
 **`POST /file/`**
 
-Метод принимает файл изображения
+The method accepts an image file:
 
 ```json
 {
@@ -11,7 +11,7 @@
 
 ```
 
-И возвращает результаты детекции модели
+And returns the results of the model detection:
 
 ```json
 {
