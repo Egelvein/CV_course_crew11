@@ -1,6 +1,6 @@
-## Сравнительная таблица метрик по экспериментам
+## Comparative table of metrics by experiments
 
-| Номер эксперимента | mAP50 | mAP50-95 |
+| Experiment number  | mAP50 | mAP50-95 |
 |:------------------:|:-----:|:--------:|
 | 1                  |0.9896 |0.5936    |
 | 2                  |0.9912 |0.6887    |
@@ -12,7 +12,7 @@
 | **8**              |**0.9948**|**0.9289**|
 | 9                  |0.9948 |0.8951    |
 
-Во время экспериментов следующие параметры оставались неизменными, начиная с 4 эксперимента:
+During the experiments, the following parameters were kept unchanged from experiment 4 onwards:
 
 
 ```patience = 10```
