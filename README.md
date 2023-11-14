@@ -1,5 +1,5 @@
-# Проект по нахождению дефектов на электронных платах
-Наша программа распознаёт 6 дефектов на печатных платах, такие как:
+# Project for finding defects on electronic circuit boards
+Our program recognizes 6 defects on printed circuit boards such as:
 1. Missing hole
 2. Mouse bite
 3. Open circuit
@@ -7,77 +7,76 @@
 5. Spur
 6. Spurious copper
 
-## Содержание
-- [Технологии](#технологии)
-- [Системные требования](#системные-требования)
+## Contents
+- [Technologies](#technologies)
+- [System Requirements](#system-requirements)
 - [Architecture](#architecture)
 - [Deploy](#deploy)
-- [Демонстрация работы программы](#демонстрация-работы-программы)
-- [Ограничения](#ограничения)
-- [Метрика успеха](#метрика-успеха)
+- [Program Demonstration](#demonstration-of-the-program-operation)
+- [Limitations](#limitations)
+- [Success Metrics](#success-metrics)
 - [Contributing](#contributing)
 - [FAQ](#faq)
-- [Команда проекта](#команда-проекта)
-- [Ссылки](#ссылки)
+- [Project Team](#project-team)
+- [Links](#links)
 
 
-### Технологии
+### Technologies
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Django](https://www.djangoproject.com)
 - [ClearML](https://clear.ml)
 
-### Системные требования 
-Для того, чтобы развернуть контейнер на своей машине, Вам понадобится ~10 Гб свободного места на диске
+### System Requirements 
+You will need ~10 GB of free disk space to deploy the container on your machine
 
 ### Architecture 
 
 ![ml_pipeline.jpg](images/ml_pipeline.jpg)
 
 ### Deploy
-Система состоит из трёх сервисов: 
+The system consists of three services: 
 
-- Django — веб-приложение, которое предоставляет возможность пользователю загрузить фотографию микросхемы
-- RabbitMQ — как broker задач для организации очереди сообщений между моделью и приложением
-- Fast API — программный интерфейс для отправки результатов работы модели YOLO
+- Django - a web application that provides a way for the user to upload a picture of the chip
+- RabbitMQ - as a task broker to organize a message queue between the model and the application
+- Fast API - program interface for sending the results of the YOLO model work
 
-С помощью Docker compose систему можно запустить по следующим шагам:
+Using Docker compose, the system can be started using the following steps:
 
-- Склонируйте данной репозиторий
-- Запустите docker на своей машине
-- ```sudo docker-compose build```
-- ```sudo docker-compose up -d```
+- Clone the given repository
+- Run docker on your machine
+- ````sudo docker-compose build```
+- ````sudo docker-compose up -d```.
 
 ⚠️ **disclaimer:** эта версия является тестовой, и выполняет задачу демонстрации итогов курса по компьютерному зрению.
 
-### Демонстрация работы программы
+### Demonstration of the program operation
 
 ![demo.gif](images%2Fdemo.gif)
 
 
-### Ограничения
-В качестве огрничений на данный момент можно выделить следующие вещи:
-1. Частота кадров в секунду - 4 (т.к. время отклика модели составляет 200-250 мс)
+### Limitations
+The following things can be emphasized as limitations at the moment:
+1. Frame rate per second - 4 (since the response time of the model is 200-250 ms).
 
-### Метрика успеха
-В качестве бизнес-метрики мы используем сокращение расходов предприятия и времени обследования платы за счет замещения контролеров 
-РЭА разрабатываемым сервисом.
+### Success Metrics
+As a business metric, we use the reduction in enterprise costs and board survey time by replacing controllers 
+REA by the service being developed.
 
-В качестве метрики оценки успешности экспериментов использовалась mAP50-95 (mean Average Precision в диапазоне [.50: .05: .95]: от 0,5 до 0,95 с размером шага 0,05. Изначально была поставлена цель добиться её значения не ниже 0,9, что и получилось в эксперименте 8 - добились mAP50-95 = 0.9289
+We used mAP50-95 (mean Average Precision in the range [.50: .05: .95]: 0.5 to 0.95 with a step size of 0.05 as the metric for evaluating the success of the experiments. The original goal was to achieve a value of at least 0.9, which was achieved in experiment 8 - we achieved mAP50-95 = 0.9289
 
 ### Contributing
-Если Вы желаете принять участие в разработке проекта, дать обратную связь или пожаловаться на возникающие ошибки - пишите на почту кому-нибудь из команды проекта (ниже).
+If you would like to participate in the project development, give feedback or complain about errors - write to someone from the project team (below).
 
 ### FAQ
-Будем заполнять по мере появления ошибок при использовании проекта
+We will fill it in as errors occur while using the project.
 
-### Команда проекта
-- DE + ML + PM - Елизавета Талынкова
-- ML + Back-end - [Мулхам Шахин](https://www.linkedin.com/in/mulham-shaheen-684352206/)
-- DE + ML - [Синяев Вячеслав](https://www.linkedin.com/in/vyacheslavsinyaev/) 
+### Project Team
+- DE + ML + PM - Elizaveta Talynkova
+- ML + Back-end - [Mulham Shahin](https://www.linkedin.com/in/mulham-shaheen-684352206/)
+- DE + ML - [Sinyayev Vyacheslav](https://www.linkedin.com/in/vyacheslavsinyaev/) 
 
-### Ссылки
-- Ссылка на исходный датасет - [здесь](https://www.dropbox.com/s/h0f39nyotddibsb/VOC_PCB.zip?dl=0)
-- Описание датасета на kaggle - [здесь](https://www.kaggle.com/datasets/sudharshann/pcb-defect-dataset)
-- Ссылка на получившийся датасет - [здесь](https://drive.google.com/drive/folders/1RbKRm6jYgw1rHkB8_KPg4Eu-Q_fVcrPc?usp=sharing)
-
+### Links
+- Link to the original dataset - [here](https://www.dropbox.com/s/h0f39nyotddibsb/VOC_PCB.zip?dl=0)
+- Description of the dataset on kaggle - [here](https://www.kaggle.com/datasets/sudharshann/pcb-defect-dataset)
+- Link to the resulting dataset - [here](https://drive.google.com/drive/folders/1RbKRm6jYgw1rHkB8_KPg4Eu-Q_fVcrPc?usp=sharing)
